@@ -313,7 +313,7 @@
         <div class="stat"><div class="stat-figure">8</div><div class="stat-label">Group subsidiaries unified onto one enterprise platform</div></div>
         <div class="stat"><div class="stat-figure">KSh M&ndash;B</div><div class="stat-label">Value of the tender and contract portfolio led, millions into billions</div></div>
         <div class="stat"><div class="stat-figure">1st</div><div class="stat-label">Ranked first in class, BSc Actuarial Science, First-Class Honours</div></div>
-        <div class="stat"><div class="stat-figure">2018</div><div class="stat-label">Year this enterprise transformation career began</div></div>
+        <div class="stat"><div class="stat-figure"><span id="years-exp">8</span>+</div><div class="stat-label">Years leading finance, ERP and enterprise transformation, since 2018</div></div>
       </div>
     </div>
   </section>
@@ -391,7 +391,7 @@
             <li>Integrates international sourcing and import coordination into commercial execution, managing the full sourcing-to-delivery chain, including supplier and customer coordination, logistics, and commercial and financial administration, for internationally procured equipment, materials, and specialised goods.</li>
             <li>Uses SAP, including SAP SRM/C-Folder, as the core commercial and tender-management platform, governing supplier records, quotations, bid submissions, and procurement workflows within a single system of record.</li>
             <li>Leads tendering and procurement as a core commercial capability for the Group, working directly with directors and business-unit leaders to align bid strategy with wider commercial and growth objectives.</li>
-            <li>Leads a growing direct team, currently six direct reports and expanding, while also carrying broader functional ownership and cross-functional and matrix leadership across the wider eight-company Group, working closely with directors, department heads, and business-unit leaders in departments and subsidiaries outside the direct reporting line.</li>
+            <li>Leads and continues to grow a direct team, while also carrying broader functional ownership and cross-functional and matrix leadership across the wider eight-company Group, working closely with directors, department heads, and business-unit leaders in departments and subsidiaries outside the direct reporting line.</li>
           </ul>
 
           <p class="role-outcome"><strong>Role evolution &amp; impact.</strong> What began as a finance and ERP transformation brief has become a broad commercial and operational mandate. Moved the Group from eight businesses coordinated manually with fragmented information to a connected enterprise with governed systems, consolidated financial oversight, and a professionalised, Group-wide tendering and international sourcing capability, and the role continues to expand in scope and authority.</p>
@@ -495,9 +495,28 @@
         <div><a href="Josphat_Kuria_Njuguna_CV.pdf">Download full CV (PDF)</a></div>
       </div>
     </div>
-    <p class="copyright">&copy; 2026 Josphat Kuria Njuguna &middot; Open to remote &amp; international roles</p>
+    <p class="copyright">&copy; <span id="copyright-year">2026</span> Josphat Kuria Njuguna &middot; Open to remote &amp; international roles</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  // Years of experience: counts full completed years since April 2018 and
+  // never needs manual updating again. "X+" means "more than X, currently
+  // partway through year X+1" \u2014 the standard convention.
+  var start = new Date(Date.UTC(2018, 3, 1)); // April 1, 2018
+  var now = new Date();
+  var years = now.getUTCFullYear() - start.getUTCFullYear();
+  var hadAnniversary = (now.getUTCMonth() > start.getUTCMonth()) ||
+    (now.getUTCMonth() === start.getUTCMonth() && now.getUTCDate() >= start.getUTCDate());
+  if (!hadAnniversary) years -= 1;
+  var yearsEl = document.getElementById('years-exp');
+  if (yearsEl) yearsEl.textContent = years;
+
+  var yearEl = document.getElementById('copyright-year');
+  if (yearEl) yearEl.textContent = now.getUTCFullYear();
+})();
+</script>
 
 </body>
 </html>
