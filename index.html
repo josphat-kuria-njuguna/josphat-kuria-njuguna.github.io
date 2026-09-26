@@ -42,6 +42,7 @@
   "jobTitle": "Finance, ERP & Operations Lead",
   "description": "Enterprise transformation, commercial, and operations leader based in Nairobi and open to remote and international roles, with experience since 2018 across finance, ERP and business systems, Group-wide tendering and procurement, international OEM and manufacturer sourcing and import, and large-scale supply chain change.",
   "url": "https://josphat-kuria-njuguna.github.io/",
+  "image": "https://josphat-kuria-njuguna.github.io/photo-hero.jpg",
   "email": "mailto:josphatkuria3@gmail.com",
   "telephone": "+254701386907",
   "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
@@ -299,7 +300,7 @@
   <section id="profile">
     <div class="wrap">
       <div class="section-head"><h2>Executive profile</h2><div class="rule"></div></div>
-      <p class="lede">Enterprise transformation, commercial, and operations leader with experience since 2018 across finance, ERP and business systems, Group-wide tendering and procurement, international OEM and manufacturer sourcing and import, and large-scale supply chain change. Currently leads the finance, operations, and commercial mandate for an eight-company diversified group. Built its first integrated enterprise platform before growing the role into Group-wide leadership of high-value tendering, contract execution, and international sourcing, across specialised equipment, major construction and infrastructure works, and supply opportunities valued from the millions into the billions of Kenyan shillings.</p>
+      <p class="lede">Enterprise transformation, commercial, and operations leader with <span id="years-exp-intro">8</span>+ years of experience across finance, ERP and business systems, Group-wide tendering and procurement, international OEM and manufacturer sourcing and import, and large-scale supply chain change. Currently leads the finance, operations, and commercial mandate for an eight-company diversified group. Built its first integrated enterprise platform before growing the role into Group-wide leadership of high-value tendering, contract execution, and international sourcing, across specialised equipment, major construction and infrastructure works, and supply opportunities valued from the millions into the billions of Kenyan shillings.</p>
       <p class="lede" style="margin-top:1rem;">Earlier, led the digital transformation of a national agricultural export supply chain, connecting approximately 30,000 contracted farmers to international markets. Holds a BSc in Actuarial Science with First Class Honours, having ranked first in the graduating class of 2018. Leads and builds teams well beyond the direct reporting line, moving comfortably between board-level financial governance, commercial negotiation, and technical systems delivery to turn complex, multi-stakeholder operations into governed, data-driven decision-making.</p>
     </div>
   </section>
@@ -512,6 +513,8 @@
   if (!hadAnniversary) years -= 1;
   var yearsEl = document.getElementById('years-exp');
   if (yearsEl) yearsEl.textContent = years;
+  var yearsEl2 = document.getElementById('years-exp-intro');
+  if (yearsEl2) yearsEl2.textContent = years;
 
   var yearEl = document.getElementById('copyright-year');
   if (yearEl) yearEl.textContent = now.getUTCFullYear();
